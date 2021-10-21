@@ -31,35 +31,39 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const content = `
-    ${data.title}
-    ${renderLicenseBadge(data.licenseType)}
-    ## Description
-    ${data.description}
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
+  # ${data.title}
+  ${renderLicenseBadge(data.licenseType)}
+  
+  ## Description
+  ${data.description}
+  
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
 
-    ## Installation
-    ${data.installInstructions}
+  ## Installation
+  ${data.installInstructions}
   
-    ## Usage
-    \'''bash
-    ${data.appUsage}
-    \'''
+  ## Usage
+  \'''bash
+  ${data.appUsage}
+  \'''
   
-    ## License
-    Copyright (c) ${data.gitHubUser}. All rights reserved.
-    ${renderLicenseSection(data.licenseType)} 
+  ## License
+  Copyright (c) ${data.gitHubUser}. All rights reserved.
+  ${renderLicenseSection(data.licenseType)} 
   
-    ## How to Contribute
-    ${data.howToContribute}
-    ## Tests  
-    ${data.testInstructions}
-    ## Questions?
-    GitHub [${data.gitHubUser}](https://github.com/${data.gitHubUser})
-    How to reach me with additional questions ? - [${data.userEmail}](mailto://${data.userEmail})
+  ## How to Contribute
+  ${data.howToContribute}
+  
+  ## Tests  
+  ${data.testInstructions}
+
+  ## Questions?
+  GitHub [${data.gitHubUser}](https://github.com/${data.gitHubUser})
+  How to reach me with additional questions ? - [${data.userEmail}](mailto://${data.userEmail})
 `;
 
   return content;
