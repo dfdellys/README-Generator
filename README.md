@@ -1,10 +1,12 @@
+# README Generator
+
 ## Description
 
 This project uses Node.js to create a README file from a user's input using the Inquirer package.
 
 ### Preview
-![Screenshot (14)](https://user-images.githubusercontent.com/73720274/138228689-1632995a-81b0-4a56-9592-084402d2a7b9.png)
 
+![Screenshot (14)](https://user-images.githubusercontent.com/73720274/138228689-1632995a-81b0-4a56-9592-084402d2a7b9.png)
 
 ## Installation
 
