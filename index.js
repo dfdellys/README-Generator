@@ -23,12 +23,12 @@ const questions = [
     {
         type: 'input',
         name: 'appUsage',
-        message: 'Enter the usage information',
+        message: 'Enter the usage instructions',
     },
     {
         type: 'input',
         name: 'testInstructions',
-        message: 'Enter instructions for test',
+        message: 'Enter test instructions',
     },
     {
         type: 'list',
@@ -53,10 +53,22 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const content = generateMarkdown(data);
+    fs.writeFile(fileName, content, (err) =>
+    err ? console.log(err) : console.log('Successsfully created README')
+    );
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then((data) => {
+        const fileName = 'README.md'
+        writeToFile(filename,data);
+    });
+}
 
 // Function call to initialize app
 init();
